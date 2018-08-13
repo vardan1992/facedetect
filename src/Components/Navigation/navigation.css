@@ -1,0 +1,14 @@
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    background:#262330;
+    color: white;
+    border-bottom: 6px solid #140E25;
+}
+
+.button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+}

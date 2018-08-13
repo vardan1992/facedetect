@@ -1,0 +1,49 @@
+.input-image-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    clear: both;
+}
+
+.input-image-form__p {
+    font-size: 20px;
+    font-weight: 800;
+    color: white
+}
+.input-image-form__form {
+    height: 150px;
+    background:
+linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+background-color:#708090;
+background-size: 64px 128px;
+}
+.input-image-form__input {
+    padding: 20px;
+    margin: 40px 20px;
+    border: none;
+    width: 70%;
+    border: 2px solid #140E25;
+}
+
+
+.input-image-form__button {
+    padding: 20px;
+    border: none;
+    background:#262330;
+    border: 2px solid #140E25;
+
+}
+
+@media screen and (max-width: 480px) {
+    .input-image-form__input {
+        width: 80%;
+        margin: 20px;
+        padding: 15px
+    }
+
+    .input-image-form__button {
+        width: 40%;
+        padding: 15px
+    }
+}
