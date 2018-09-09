@@ -1,0 +1,45 @@
+.sign-in-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    clear: both;
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+
+.sign-in__input {
+    padding: 20px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border: 2px solid #140E25;
+}
+
+
+.sign-in__button {
+    padding: 20px;
+    margin: 10px 0; 
+    border: none;
+    background:#262330;
+    border: 2px solid #140E25;
+
+}
+
+@media screen and (max-width: 480px) {
+    .sign-in__input {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px
+    }
+
+    .sign-in___button {
+        width: 90%;
+        padding: 15px
+    }
+}

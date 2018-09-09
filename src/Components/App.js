@@ -10,6 +10,9 @@ import Logo from './Logo/Logo';
 import InputImageForm from './InputImageForm/InputImageForm';
 import Rank from './Rank/Rank';
 
+import Signin from './Signin/Signin';
+
+import Register from './Register/Register';
 import FaceDetect from './FaceDetect/FaceDetect';
 
 import 'tachyons';
@@ -42,7 +45,9 @@ class App extends Component {
       this.state = {
         input:'',
         box: {
-        }
+        },
+        route:'signin',
+        signedIn: false
       }
    }
 
@@ -74,6 +79,15 @@ class App extends Component {
       })
    }
 
+   handleRoute = (route,signedIn) => {
+     this.setState(() => {
+       return {
+         route,
+         signedIn
+       }
+     })
+   }
+
    onSubmitURL = (e) => {
       e.preventDefault();
       const imageurl = e.target.url.value;
@@ -95,11 +109,28 @@ class App extends Component {
       <div className="App">
       
       <Particles params={particlesOption} className="particles" />
-       <Navigation />
+       
+       <Navigation handleRoute= {this.handleRoute} signedIn= {this.state.signedIn} />
        <Logo />
-       <Rank />
-       <InputImageForm onSubmitURL= {this.onSubmitURL} />
-       <FaceDetect url ={this.state.input} box={this.state.box}/>
+       { 
+        this.state.route === 'signin' 
+        ?
+        <Signin handleRoute= {this.handleRoute} /> 
+        :
+        
+        this.state.route === 'register' 
+        ? 
+        <Register handleRoute = {this.handleRoute} />
+        :
+        <div>
+          <Rank />
+          <InputImageForm onSubmitURL= {this.onSubmitURL} />
+          <FaceDetect url ={this.state.input} box={this.state.box}/>
+      
+       
+        </div>
+       }
+      
       </div>
     );
   }

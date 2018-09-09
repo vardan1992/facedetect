@@ -11,4 +11,10 @@
     border: none;
     font-size: 20px;
     color: white;
+    margin: 10px;
+}
+
+.button-container {
+    max-width: 300px;
+    margin: auto 10px;
 }

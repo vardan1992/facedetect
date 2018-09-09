@@ -1,0 +1,45 @@
+.register-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    clear: both;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+
+.register__input {
+    padding: 20px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border: 2px solid #140E25;
+}
+
+
+.register__button {
+    padding: 20px;
+    margin: 10px 0; 
+    border: none;
+    background:#262330;
+    border: 2px solid #140E25;
+
+}
+
+@media screen and (max-width: 480px) {
+    .register__input {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px
+    }
+
+    .register___button {
+        width: 90%;
+        padding: 15px
+    }
+}
